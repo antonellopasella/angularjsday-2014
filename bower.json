@@ -1,0 +1,23 @@
+{
+  "name": "angularjsday-2014",
+  "version": "0.0.0",
+  "authors": [
+    "Antonello Pasella <antonello.pasella@gmail.com>"
+  ],
+  "description": "Demo per il talk all' AngularJS Day di Ancona",
+  "main": "app/index.html",
+  "license": "MIT",
+  "homepage": "www.pasella.it",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-barcode": "git://github.com/antonellopasella/jquery-barcode.git",
+    "angular": "~1.2.14"
+  }
+}

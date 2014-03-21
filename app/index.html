@@ -1,0 +1,28 @@
+<html ng-app='app'>
+	<body>
+		<div ng-init='codice = 1234' />
+		<input type='text' id='codice' ng-model='codice'/>
+
+		<div class='check-barcode' style="width:500px;height:50px;"></div>
+		<hr/>
+		<img barcode codice='codice' style="width:500px;height:50px;" />
+
+		<script src='../bower_components/jquery/dist/jquery.min.js' type='text/javascript'></script>
+		<script src='../bower_components/jquery-barcode/jquery.barcode.js' type='text/javascript'></script>
+		<script src='../bower_components/angular/angular.min.js' type='text/javascript'></script>
+
+
+		<script src='js/angular-directive-barcode/angular-directive-barcode.js' type='text/javascript'></script>
+		<script src='js/bootstrap.js' type='text/javascript'></script>
+
+		<script type="text/javascript">
+		setInterval(function(){
+			console.log($('#codice').val());
+			$(".check-barcode")
+				.html($('#codice').val())
+				.barcode({code:'code39'});;
+		}, 500);
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+	<body>
+		<div class='barcode' style="width:120px;height:50px;margin:20px;float:left;">
+			1234567890
+		</div>
+		<script src='../bower_components/jquery/dist/jquery.min.js' type='text/javascript'></script>
+		<script src='../bower_components/jquery-barcode/jquery.barcode.js' type='text/javascript'></script>
+		<script>
+            console.log("inizio", new Date());
+            for(i = 0; i < 1000; i++){
+                $('.barcode:eq(0)')
+                    .clone()
+                    .appendTo('body')
+                    .html( (parseInt(Math.random()*100000)));
+            }
+            console.log("inizio plugin", new Date());
+			$('.barcode').barcode({code:'code39'});
+            console.log("FINE", new Date());
+		</script>
+	</body>
+</html>
